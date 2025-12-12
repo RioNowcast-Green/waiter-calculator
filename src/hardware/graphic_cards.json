@@ -834,6 +834,15 @@
           "tdp": "575 W"
         }
       ]
+    },
+    {
+      "generation": "Quadro",
+      "models": [
+        {
+          "name": "Quadro RTX 5000",
+          "tdp": "230 W"
+        }
+      ]
     }
   ]
 }

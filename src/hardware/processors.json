@@ -5039,6 +5039,15 @@
                     "TDP": "35 W"
                 }
             ]
+        },
+        {
+            "generation": "Xeon",
+            "models": [
+                {
+                    "Name": "Xeon W-2255",
+                    "TDP": "165 W"
+                }
+            ]
         }
     ]
 }

@@ -18,7 +18,7 @@ export function useCalculator() {
     processor: { label: string; tdp: string } | null,
     gpuBrand: { label: string } | null,
     graphicCard: { label: string; tdp: string } | null,
-    country: { label: string; wue: string; carbon_intensity: string } | null
+    country: { label: string; wue: string; carbon_intensity: string } | null,
   ) => {
     let onSiteWUE = 0;
     let pue = 1;

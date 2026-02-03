@@ -10,6 +10,7 @@ import waterIcon from "../../public/icons/water.png";
 import lightBulbIcon from "../../public/icons/light-bulb.png";
 import carIcon from "../../public/icons/car.png";
 import bottleIcon from "../../public/icons/bottle.png";
+import treeIcon from "../../public/icons/tree.png";
 
 import logo from "../../public/icons/logo.svg";
 
@@ -26,8 +27,8 @@ export const Home = () => {
       <div className="flex flex-wrap items-center justify-around mt-5 mb-20">
         <CalculatorForm />
 
-        <div className="flex flex-col items-center mx-2 md:mx-5  gap-10 max-w-[800px] mt-4 md:mt-0">
-          <div className="flex flex-wrap justify-around gap-5 max-w-[900px]">
+        <div className="flex flex-col w-full items-stretch gap mx-2 md:mx-5 gap-10 max-w-[300px] sm:max-w-[400px] md:max-w-[900px] mt-4 md:mt-0">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 w-full">
             <ResultCard
               img={energyIcon}
               label={"Energy Consumed"}
@@ -38,11 +39,15 @@ export const Home = () => {
               label={"Carbon Footprint"}
               result={`${context.carbon_footprint.toFixed(2)} kgCO2e`}
             />
-            <ResultCard
-              img={waterIcon}
-              label={"Water Footprint"}
-              result={`${context.water_consumed.toFixed(2)} L`}
-            />
+            <div className="col-span-2 md:col-span-1">
+              <ResultCard
+                img={waterIcon}
+                label={"Water Footprint"}
+                result={`${context.water_consumed.toFixed(2)} L`}
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 max-w-[1500px]">
             <ResultCard
               img={lightBulbIcon}
               label={"Light Bulb (60W)"}
@@ -52,15 +57,23 @@ export const Home = () => {
               img={carIcon}
               label={"Carbon Footprint"}
               result={`${Math.floor(
-                Number(context.carbon_footprint.toFixed(2)) / 0.096
+                Number(context.carbon_footprint.toFixed(2)) / 0.096,
               )} km`}
             />
             <ResultCard
               img={bottleIcon}
               label={"Bottle of Water"}
               result={`${Math.floor(
-                Number(context.water_consumed.toFixed(2)) * 2
+                Number(context.water_consumed.toFixed(2)) * 2,
               )} units`}
+            />
+            <ResultCard
+              img={treeIcon}
+              label={"Tree Decarbonization"}
+              result={`${Math.floor(
+                Number(context.carbon_footprint.toFixed(2) * (12 / 44)) /
+                  0.03754,
+              )} trees in 1 day`}
             />
           </div>
           <div className="rounded-lg py-3 px-10 shadow-lg flex flex-col ">

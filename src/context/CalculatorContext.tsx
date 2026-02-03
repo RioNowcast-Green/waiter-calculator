@@ -30,12 +30,12 @@ interface CalculatorContextData {
     cpuBrand: { label: string } | null,
     gpuBrand: { label: string } | null,
 
-    country: { wue: string; carbon_intensity: string } | null
+    country: { wue: string; carbon_intensity: string } | null,
   ) => void;
 }
 
 export const CalculatorContext = createContext<CalculatorContextData>(
-  {} as CalculatorContextData
+  {} as CalculatorContextData,
 );
 
 export const CalculatorProvider: React.FC<{ children: React.ReactNode }> = ({

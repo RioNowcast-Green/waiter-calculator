@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { CalculatorContext } from "../context/CalculatorContext";
 import { ResultCard } from "../components/ResultCard";
-import CalculatorForm from "../components/form/CalculatorForm/CalculatorForm";
 import Header from "../components/Header";
 
 import co2Icon from "../../public/icons/co2.png";
@@ -13,6 +12,7 @@ import bottleIcon from "../../public/icons/bottle.png";
 import treeIcon from "../../public/icons/tree.png";
 
 import logo from "../../public/icons/logo.svg";
+import FormSection from "../components/FormSection";
 
 export const Home = () => {
   const context = useContext(CalculatorContext);
@@ -25,7 +25,7 @@ export const Home = () => {
     <div>
       <Header />
       <div className="flex flex-wrap items-center justify-around mt-5 mb-20">
-        <CalculatorForm />
+        <FormSection />
 
         <div className="flex flex-col w-full items-stretch gap mx-2 md:mx-5 gap-10 max-w-[300px] sm:max-w-[400px] md:max-w-[900px] mt-4 md:mt-0">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5 w-full">

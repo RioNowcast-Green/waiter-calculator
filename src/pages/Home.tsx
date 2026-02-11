@@ -71,6 +71,7 @@ export const Home = () => {
               img={treeIcon}
               label={"Tree Decarbonization"}
               result={`${Math.floor(
+                // @ts-expect-error arrumar depois
                 Number(context.carbon_footprint.toFixed(2) * (12 / 44)) /
                   0.03754,
               )} trees in 1 day`}

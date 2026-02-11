@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { CalculatorContext } from "../../../context/CalculatorContext";
 import { CalculatorSchemaType } from "../CalculatorForm/calculatorSchema";
-// import templateCSV from "../../../../public/template.csv";
 
 import countries from "../../../country/countries.json";
 
@@ -34,6 +33,7 @@ function ReadCSV() {
 
   const knowsEnergyConsumed = true;
 
+  // @ts-expect-error arrumar depois
   const handleCalculate = (body: CalculatorSchemaType, country) => {
     countries.forEach((c) => {
       if (c.name === country) {

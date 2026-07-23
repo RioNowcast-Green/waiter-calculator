@@ -843,6 +843,53 @@
           "tdp": "230 W"
         }
       ]
+    },
+    {
+      "generation": "A100",
+      "models": [
+        {
+          "name": "A100 40GB PCIe",
+          "tdp": "250 W"
+        },
+        {
+          "name": "A100 80GB PCIe",
+          "tdp": "300 W"
+        },
+        {
+          "name": "A100 40GB SXM",
+          "tdp": "400 W"
+        },
+        {
+          "name": "A100 80GB SXM",
+          "tdp": "400 W"
+        }
+      ]
+    },
+    {
+      "generation": "H100",
+      "models": [
+        {
+          "name": "H100 SXM",
+          "tdp": "400 W"
+        },
+        {
+          "name": "H100 NVL",
+          "tdp": "400 W"
+        }
+      ]
+    },
+    {
+      "generation": "H200",
+      "models": [
+        {
+          "name": "H200 SXM",
+          "tdp": "400 W"
+        },
+        {
+          "name": "H200 NVL",
+          "tdp": "350 W"
+        }
+      ]
     }
   ]
 }
